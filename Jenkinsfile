@@ -11,9 +11,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-<<<<<<< HEAD
-                sh 'echo "Hello world Development!"'
-=======
                 sh 'npm install'
             }
         }
@@ -40,7 +37,6 @@ pipeline {
                 sh './jenkins/scripts/deploy-for-production.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
->>>>>>> 91e8e0d83eea22bb579ca46b72c794b95bf704a1
             }
         }
     }
